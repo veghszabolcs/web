@@ -10,34 +10,37 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
-<body>
-    <h1>Form</h1>
-    <form action="">
-        <div class="from-group row">
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <br>
-                <input type="text" name="name" class="">
-                <br>
-            </div>
-            <div class="mb-3">
-                <label for="birthplace" class="form-label">Birthplace:</label>
-                <br>
-                <input type="text" name="birtplace" id="birthplace">
-                <br>
-            </div>
-            <div class="mb-3">
-                <label for="food" class="form-label">Favourite food:</label>
-                <br>
-                <input type="text" name="food" id="food">
-                <br>
-            </div>
-            <div class="mb-3">
-                <label for="cert" class="form-label">Do you have a language certificate?</label>
-                <input type="checkbox" name="cert" id="cert">
-            </div>
+<body class="position-relative">
+    <div class="border w-50 mx-auto mt-3 rounded border-3 bg-light">
+        <h1 class="w-50 mx-auto text-center mt-2">Form</h1>
+        <div class="w-75 mx-auto">
+            <form>
+                <div class="form-group">
+                    <label for="">First name:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Last name:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Birthplace:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Favourite food:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group mt-2 text-center">
+                    <label for="lang">Do you possess a langauge certificate?</label>
+                    <input type="checkbox" class="">
+                </div>
+                <div class="form-group text-center mt-2">
+                    <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 </body>
 
 </html>
