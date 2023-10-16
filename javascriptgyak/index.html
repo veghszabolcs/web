@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("Ezt a js írta" + "<br>")
+        console.log("a")
+        var a = 23
+        var b = 53.34
+        var nev = "giorno giovanna"
+        var vane = false
+
+        var c = a + b
+        document.write(c + "<br>")
+
+        var szamok = [12, 34, 23, 567, 56, 57, 23, 18, 15]
+        var sum = 0
+        for (var i = 0; i < szamok.length; i++) {
+            sum += szamok[i]
+        }
+        document.write("a tomb elemeinek osszege: " + sum + "<br>")
+
+        var db = 0
+        for (var i = 0; i < szamok.length; i++) {
+            if (szamok[i] % 3 == 0 && szamok[i] % 2 == 0) {
+                db++
+            }
+        }
+        document.write(db + "db harommal oszthato paros szam van<br>")
+
+        var max = szamok[0]
+        for (var i = 0; i < szamok.length; i++) {
+            if (max < szamok[i]) {
+                max = szamok[i]
+            }
+        }
+        document.write(max + " a legnagyobb szam a tombben<br>")
+
+
+        var most = new Date();
+        document.write(most+"<br>")
+        document.write(most.getMonth())
+    </script>
+</head>
+
+<body>
+    <p>szöveg a bodyban</p>
+</body>
+
+</html>
