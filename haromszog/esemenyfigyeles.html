@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eseményfigyelő</title>
+    <script>
+        function vizsgal(){
+            document.getElementById('kiir_nev').innerHTML = document.getElementById('name').value
+            document.getElementById('kiir_email').innerHTML = document.getElementById('email').value
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="name">Név: </label>
+        <input type="text" id="name" onchange="vizsgal()"><br>
+        <label for="email">Email: </label>
+        <input type="text" id="email" onkeyup="vizsgal()">
+    </form>
+    <p>A beviteli mező változását érzékeli:</p>
+    <p id="kiir_nev"></p>
+    <p>A billentyű felegnedését érzékeli:</p>
+    <p id="kiir_email"></p>
+</body>
+</html>
