@@ -1,0 +1,10 @@
+#keret{
+margin-right: auto;
+margin-left: auto;
+border: 2px black solid;
+width: 30%;
+text-align: center;
+}
+#gomb{
+    margin-bottom: 10px;
+}

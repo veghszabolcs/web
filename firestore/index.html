@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vendégkönyv</title>
+</head>
+
+<body>
+    <div id="keret">
+        <h1>Vendégkönyv</h1>
+        <form action="" id="message-form">
+            <label for="name">Adja meg a nevét</label>
+            <input type="text" name="name"><br>
+            <label for="message">Adjon meg egy üzenetet</label>
+            <input type="text"><br>
+            <button type="submit"></button>
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore-compat.js"></script>
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDr2Wc4zFAyMC3jFCB1dnbJgedrpoqtAAA",
+            authDomain: "vendegkonyv-d57f9.firebaseapp.com",
+            projectId: "vendegkonyv-d57f9",
+            storageBucket: "vendegkonyv-d57f9.appspot.com",
+            messagingSenderId: "784655226551",
+            appId: "1:784655226551:web:b5bbdb93034a5b11509f32"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore(app);
+
+        document.getElementById('message-form').addEventListener('submit', function (e) {
+            e.preventDefault
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+
+            db.collection('vendegkonyv').add({
+                nev: name,
+                uzenet: message
+            })
+                .then((docRef) => {
+                    console.log(docRef.id);
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+        });
+    </script>
+</body>
+
+</html>
